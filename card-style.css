@@ -139,14 +139,14 @@ input {
   }
 
   .front__card {
-    max-width: 19rem;
-    transform: translate(6%, 75%);
+    max-width: 16rem;
+    transform: translate(11%, 105%);
     z-index: 1;
   }
 
   .back__card {
-    max-width: 19rem;
-    transform: translate(35%, 19.5%);
+    max-width: 16rem;
+    transform: translate(40%, 49.5%);
   }
 
   .card__info {
