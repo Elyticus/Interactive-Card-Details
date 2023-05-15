@@ -54,8 +54,10 @@ body {
   aspect-ratio: 16/9;
   background-image: url(images/bg-card-front.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   transform: translate(50%, 100%);
+  border-radius: 7px;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.185);
 }
 
 .back__card {
@@ -64,7 +66,9 @@ body {
   aspect-ratio: 16/9;
   background-image: url(images/bg-card-back.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  border-radius: 7px;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.185);
   transform: translate(70%, 220%);
 }
 
@@ -186,7 +190,6 @@ input:focus {
   body {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
 
   .moble__bg__image {
@@ -195,14 +198,15 @@ input:focus {
   }
 
   .front__card {
-    max-width: 16rem;
-    transform: translate(11%, 105%);
+    max-width: 17rem;
+    transform: translate(10%, 105%);
+    box-shadow: none;
     z-index: 1;
   }
 
   .back__card {
-    max-width: 16rem;
-    transform: translate(40%, 49.5%);
+    max-width: 17rem;
+    transform: translate(30%, 48.5%);
   }
 
   .card__info {
@@ -211,17 +215,17 @@ input:focus {
 
   .card__info__flex {
     font-size: 0.7rem;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
   .cvc__number {
     font-size: 0.7rem;
-    transform: translate(76%, 440%);
+    transform: translate(80%, 480%);
   }
 
   .card__number {
     font-size: 1rem;
-    transform: translate(0%, -50%);
+    transform: translate(0%, 0%);
   }
 
   .card__icon {
