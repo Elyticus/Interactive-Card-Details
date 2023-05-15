@@ -186,6 +186,7 @@ input:focus {
   body {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .moble__bg__image {
