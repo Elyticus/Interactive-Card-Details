@@ -38,6 +38,16 @@ body {
   font-size: 18px;
 }
 
+.card__icon {
+  background-image: url(images/card-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  width: 6rem;
+  height: 4rem;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .front__card {
   position: absolute;
   width: 25rem;
@@ -70,9 +80,25 @@ body {
   letter-spacing: 2px;
 }
 
+.card__info__flex {
+  color: var(--White);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-inline: 25px;
+}
+
 .exp__date {
   display: flex;
-  gap: 15px;
+  gap: 1rem;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 input {
@@ -80,30 +106,43 @@ input {
   font-family: var(--Google-Font);
   letter-spacing: 1px;
   color: var(--Dark-grayish-violet);
+  outline: none;
 }
 
 .input__name,
 .input__card {
-  width: 340px;
-  height: 40px;
+  width: 21.25rem;
+  height: 2.5rem;
   margin-top: 7px;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   border: 1px solid hsla(279, 6%, 55%, 0.425);
   border-radius: 7px;
 }
 
+input:focus {
+  border: 2px solid;
+  border-radius: 7px;
+  color: hsla(249, 99%, 64%, 0.514);
+  /* border-image: linear-gradient(
+    to right,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  ); */
+  border-image-slice: 1;
+}
+
 .input__month,
 .input__year {
-  width: 70px;
-  height: 40px;
+  width: 4.375rem;
+  height: 2.5rem;
   margin-top: 7px;
   border: 1px solid hsl(279, 6%, 55%, 0.425);
   border-radius: 7px;
 }
 
 .input__cvc {
-  width: 170px;
-  height: 40;
+  width: 10.625rem;
+  height: 2.5rem;
   margin-top: 7px;
   border: 1px solid hsl(279, 6%, 55%, 0.425);
   border-radius: 7px;
@@ -111,14 +150,14 @@ input {
 
 .exp__details {
   display: flex;
-  gap: 45px;
+  gap: 2.8125rem;
 }
 
 .confirm__btn {
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
   border: none;
   background-color: var(--Very-dark-violet);
   color: var(--White);
@@ -127,7 +166,23 @@ input {
   font-size: 1rem;
 }
 
-@media all and (max-width: 650px) {
+.card__number {
+  color: var(--White);
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: left;
+  margin-inline: 25px;
+  transform: translate(0%, 100%);
+}
+
+.cvc__number {
+  color: var(--White);
+  transform: translate(77%, 415%);
+  letter-spacing: 1px;
+}
+
+@media all and (max-width: 40.625rem) {
   body {
     display: flex;
     flex-direction: column;
@@ -135,7 +190,7 @@ input {
 
   .moble__bg__image {
     min-width: 100%;
-    height: 250px;
+    height: 15.625rem;
   }
 
   .front__card {
@@ -151,5 +206,26 @@ input {
 
   .card__info {
     margin-top: 100px;
+  }
+
+  .card__info__flex {
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+
+  .cvc__number {
+    font-size: 0.7rem;
+    transform: translate(76%, 440%);
+  }
+
+  .card__number {
+    font-size: 1rem;
+    transform: translate(0%, -50%);
+  }
+
+  .card__icon {
+    margin-top: 20px;
+    margin-left: 20px;
+    background-size: 50px;
   }
 }
