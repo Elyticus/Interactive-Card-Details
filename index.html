@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Document Name -->
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" href="card-style.css" />
+  </head>
+  <body>
+    <div class="front__card">
+      <p>0000 0000 0000 0000</p>
+      <p>Jane Appleseed</p>
+      <p>00/00</p>
+    </div>
+
+    <div class="back__card">
+      <p>000</p>
+    </div>
+
+    <picture>
+      <source
+        class="desktop__bg__image"
+        media="(min-width: 650px)"
+        srcset="images/bg-main-desktop.png"
+      />
+
+      <img
+        class="moble__bg__image"
+        src="images/bg-main-mobile.png"
+        style="width: auto"
+        alt="Responisve Mobile Background Image"
+      />
+    </picture>
+
+    <div class="card__info">
+      <p>Cardholder Name</p>
+      <input
+        class="input__name"
+        type="text"
+        placeholder="e.g. Jane Appleseed"
+      />
+
+      <p>Card Number</p>
+      <input
+        class="input__card"
+        type="text"
+        placeholder="e.g. 1234 5678 9123 0000"
+      />
+
+      <div class="exp__details">
+        <p>Exp. Date (MM/YY)</p>
+        <p>CVC</p>
+      </div>
+
+      <div class="exp__date">
+        <input class="input__month" type="text" placeholder="MM" />
+        <input class="input__year" type="text" placeholder="YY" />
+        <input class="input__cvc" type="text" placeholder="e.g. 123" />
+      </div>
+
+      <button class="confirm__btn">Confirm</button>
+    </div>
+
+    <!-- Completed state start -->
+
+    <!-- <p>Thank you!</p>
+    <p>We've added your card details</p>
+    <button>Continue</button> -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

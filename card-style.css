@@ -1,0 +1,155 @@
+:root {
+  /* Primary Colors */
+  /* (active input border) */
+  --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+
+  /* (input errors) */
+  --Red: hsl(0, 100%, 66%);
+
+  /* Neutral Colors */
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+
+  /* Google Font (500) */
+  --Google-Font: "Space Grotesk", sans-serif;
+}
+
+/* Feel free to remove these styles or customise in your own stylesheet 👍 */
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  font-family: var(--Google-Font);
+  font-size: 18px;
+}
+
+.front__card {
+  position: absolute;
+  width: 25rem;
+  aspect-ratio: 16/9;
+  background-image: url(images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(50%, 100%);
+}
+
+.back__card {
+  position: absolute;
+  width: 25rem;
+  aspect-ratio: 16/9;
+  background-image: url(images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(70%, 220%);
+}
+
+.moble__bg__image {
+  height: 100vh;
+}
+
+.card__info {
+  align-self: center;
+  margin-inline: auto;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.exp__date {
+  display: flex;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  font-family: var(--Google-Font);
+  letter-spacing: 1px;
+  color: var(--Dark-grayish-violet);
+}
+
+.input__name,
+.input__card {
+  width: 340px;
+  height: 40px;
+  margin-top: 7px;
+  margin-bottom: 30px;
+  border: 1px solid hsla(279, 6%, 55%, 0.425);
+  border-radius: 7px;
+}
+
+.input__month,
+.input__year {
+  width: 70px;
+  height: 40px;
+  margin-top: 7px;
+  border: 1px solid hsl(279, 6%, 55%, 0.425);
+  border-radius: 7px;
+}
+
+.input__cvc {
+  width: 170px;
+  height: 40;
+  margin-top: 7px;
+  border: 1px solid hsl(279, 6%, 55%, 0.425);
+  border-radius: 7px;
+}
+
+.exp__details {
+  display: flex;
+  gap: 45px;
+}
+
+.confirm__btn {
+  cursor: pointer;
+  margin-top: 40px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  border-radius: 7px;
+  font-family: var(--Google-Font);
+  font-size: 1rem;
+}
+
+@media all and (max-width: 650px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .moble__bg__image {
+    min-width: 100%;
+    height: 250px;
+  }
+
+  .front__card {
+    max-width: 19rem;
+    transform: translate(6%, 75%);
+    z-index: 1;
+  }
+
+  .back__card {
+    max-width: 19rem;
+    transform: translate(35%, 19.5%);
+  }
+
+  .card__info {
+    margin-top: 100px;
+  }
+}
