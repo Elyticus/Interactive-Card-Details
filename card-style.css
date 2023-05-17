@@ -159,7 +159,11 @@ input:focus {
 }
 
 .redError {
-  border: 1px solid red;
+  border: 1px solid hsl(0, 100%, 66%);
+}
+
+.greenValid {
+  background-image: linear-gradient(325deg, #0ed8df18, #ffffff);
 }
 
 .exp__details {
@@ -192,7 +196,7 @@ input:focus {
 
 .cvc__number {
   color: var(--White);
-  transform: translate(77%, 415%);
+  transform: translate(77%, 430%);
   letter-spacing: 1px;
 }
 
@@ -210,7 +214,7 @@ input:focus {
   margin-top: 10px;
 }
 
-.blank__error {
+.exp__info {
   display: flex;
   gap: 100px;
 }
