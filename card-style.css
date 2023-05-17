@@ -31,6 +31,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: hsl(197, 85%, 42%);
+  background: #e5f506a4;
+}
+
 body {
   overflow: hidden;
   display: flex;
@@ -127,6 +132,7 @@ input:focus {
   border: 2px solid;
   border-radius: 7px;
   color: hsla(249, 99%, 64%, 0.514);
+  background-color: #bc44e01a;
   /* border-image: linear-gradient(
     to right,
     hsl(249, 99%, 64%),
@@ -152,9 +158,13 @@ input:focus {
   border-radius: 7px;
 }
 
+.redError {
+  border: 1px solid red;
+}
+
 .exp__details {
   display: flex;
-  gap: 2.8125rem;
+  gap: 3.2rem;
 }
 
 .confirm__btn {
@@ -184,6 +194,25 @@ input:focus {
   color: var(--White);
   transform: translate(77%, 415%);
   letter-spacing: 1px;
+}
+
+.blank__class {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  text-transform: none;
+  color: var(--Red);
+  display: none;
+  font-size: 11px;
+  letter-spacing: normal;
+}
+
+.exp__error {
+  margin-top: 10px;
+}
+
+.blank__error {
+  display: flex;
+  gap: 100px;
 }
 
 @media all and (max-width: 40.625rem) {
