@@ -32,16 +32,20 @@
     <div class="front__card">
       <div class="card__icon"></div>
 
-      <p class="card__number">0000 0000 0000 0000</p>
+      <p class="card__number" id="display__card">0000 0000 0000 0000</p>
 
       <div class="card__info__flex">
-        <p>Jane Appleseed</p>
-        <p>00/00</p>
+        <p id="display__name">Jane Appleseed</p>
+
+        <div class="display__expiration_date">
+          <p id="display__exp__date">00/</p>
+          <p id="display__exp__year">00</p>
+        </div>
       </div>
     </div>
 
     <div class="back__card">
-      <p class="cvc__number">000</p>
+      <p class="cvc__number" id="display__cvc">000</p>
     </div>
 
     <picture>
@@ -97,9 +101,11 @@
 
     <!-- Completed state start -->
 
-    <!-- <p>Thank you!</p>
-    <p>We've added your card details</p>
-    <button>Continue</button> -->
+    <div class="final__section display__me">
+      <p class="confirm_thank_you">Thank you!</p>
+      <p class="info__details">We've added your card details</p>
+      <button class="final__button">Continue</button>
+    </div>
 
     <!-- <div class="attribution">
       Challenge by
