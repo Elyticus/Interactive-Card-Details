@@ -17,7 +17,7 @@ const printCVC = document.getElementById("display__cvc");
 const validateName = () => {
   const displayError = document.querySelectorAll(".blank__class")[0];
 
-  const regex = /^[a-zA-Z\s]*$/;
+  const regexLetter = /^[a-zA-Z\s]*$/;
 
   if (inputNameElement.value.trim() === "") {
     inputNameElement.classList.add("redError");
@@ -26,14 +26,13 @@ const validateName = () => {
     displayError.textContent = "Can't be blank!";
     displayError.style.color = "red";
     cardInfo.style.display = "block";
-  } else if (!regex.test(inputNameElement.value)) {
+  } else if (!regexLetter.test(inputNameElement.value)) {
     inputNameElement.classList.add("redError");
     inputNameElement.classList.remove("greenValid");
     displayError.style.display = "block";
     displayError.style.color = "red";
     displayError.textContent = "Invalid characters!";
     cardInfo.style.display = "block";
-    finalInfo.style.display = "none";
   } else {
     inputNameElement.classList.remove("redError");
     inputNameElement.classList.add("greenValid");
@@ -47,7 +46,7 @@ const validateName = () => {
 };
 
 const validateCard = () => {
-  const regex = /^[0-9]+$/;
+  const regex = /[0-9 ]+/;
   const displayError = document.querySelectorAll(".blank__class")[1];
 
   if (inputCardElement.value.trim() === "") {
@@ -70,7 +69,6 @@ const validateCard = () => {
     displayError.style.color = "green";
     displayError.textContent = "Your registration card number has accepted.";
     displayError.style.display = "block";
-    finalInfo.style.display = "none";
   }
 };
 
@@ -79,7 +77,7 @@ const validateExpMmAndYy = () => {
 
   const displayError = document.querySelectorAll(".blank__class")[2];
 
-  const regex = /^[0-9]+$/;
+  const regexMonth = /^[0-9]+$/;
 
   if (inputYear.value.trim() === "" || inputMonth.value.trim() === "") {
     inputYear.classList.remove("greenValid");
@@ -91,7 +89,10 @@ const validateExpMmAndYy = () => {
     displayError.textContent = "Can't be blank!";
     expirationFlex.style.gap = "95px";
     cardInfo.style.display = "block";
-  } else if (!inputYear.value.match(regex) || !inputMonth.value.match(regex)) {
+  } else if (
+    !inputYear.value.match(regexMonth) ||
+    !inputMonth.value.match(regexMonth)
+  ) {
     inputYear.classList.remove("greenValid");
     inputMonth.classList.remove("greenValid");
     inputYear.classList.add("redError");
@@ -116,7 +117,7 @@ const validateExpMmAndYy = () => {
 const validateCVC = () => {
   const displayError = document.querySelectorAll(".blank__class")[3];
 
-  const regex = /^[0-9]+$/;
+  const regexCvc = /^[0-9]+$/;
 
   if (inputCvc.value.trim() === "") {
     inputCvc.classList.remove("greenValid");
@@ -125,7 +126,7 @@ const validateCVC = () => {
     displayError.textContent = "Can't be blank!";
     displayError.style.color = "red";
     cardInfo.style.display = "block";
-  } else if (!inputCvc.value.match(regex)) {
+  } else if (!inputCvc.value.match(regexCvc)) {
     inputYear.classList.remove("greenValid");
     inputCvc.classList.add("redError");
     displayError.style.display = "block";
@@ -153,17 +154,12 @@ const validateCVC = () => {
     inputCvc.classList.add("greenValid");
     inputCvc.classList.remove("redError");
     displayError.textContent = "";
-  } else if (
-    inputCvc.value === inputCvc.value &&
-    inputMonth.value.trim() === ""
-  ) {
-    inputCvc.classList.add("greenValid");
-    inputCvc.classList.remove("redError");
-    displayError.textContent = "";
   } else {
     finalInfo.style.display = "block";
   }
 };
+
+finalInfo.style.display = "none";
 
 confirmButton.addEventListener("click", validateName);
 confirmButton.addEventListener("click", validateCard);
