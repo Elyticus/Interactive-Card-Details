@@ -16,16 +16,6 @@
   --Google-Font: "Space Grotesk", sans-serif;
 }
 
-/* Feel free to remove these styles or customise in your own stylesheet 👍 */
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -100,7 +90,8 @@ body {
   text-align: center;
   justify-content: center;
   align-self: center;
-  transform: translate(125.7%, 8.9%);
+  transform: translate(125.7%, 15%);
+  visibility: hidden;
 }
 
 .confirm_thank_you {
@@ -125,6 +116,13 @@ body {
   font-size: 1rem;
 }
 
+.final__button:active {
+  background: transparent;
+  color: black;
+  border: 2px solid hsl(278, 68%, 11%);
+  transition: 0.1s ease-in-out;
+}
+
 .info__details {
   margin-top: 10px;
   color: var(--Dark-grayish-violet);
@@ -138,7 +136,7 @@ body {
   letter-spacing: 1px;
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 85px;
   margin-inline: 25px;
 }
 
@@ -174,11 +172,6 @@ input:focus {
   border-radius: 7px;
   color: hsla(249, 99%, 64%, 0.514);
   background-color: #bc44e01a;
-  /* border-image: linear-gradient(
-    to right,
-    hsl(249, 99%, 64%),
-    hsl(278, 94%, 30%)
-  ); */
   border-image-slice: 1;
 }
 
@@ -225,7 +218,15 @@ input:focus {
   font-size: 1rem;
 }
 
+.confirm__btn:active {
+  background: transparent;
+  color: black;
+  border: 2px solid hsl(278, 68%, 11%);
+  transition: 0.1s ease-in-out;
+}
+
 .card__number {
+  position: absolute;
   color: var(--White);
   font-size: 1.7rem;
   letter-spacing: 1px;
@@ -300,7 +301,7 @@ input:focus {
 
   .card__info__flex {
     font-size: 0.7rem;
-    margin-top: 15px;
+    margin-top: 35px;
   }
 
   .cvc__number {
