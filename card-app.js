@@ -151,6 +151,8 @@ function handleSubmit() {
 
   const regexLetter = /^[a-zA-Z\s]*$/;
   const regex = /[0-9 ]+/;
+  const regexMonth = /^[0-9]+$/;
+  const regexCvc = /^[0-9]+$/;
 
   if (
     inputNameElement.value &&
@@ -160,13 +162,18 @@ function handleSubmit() {
     inputCvc.value
   ) {
     finalInfo.style.visibility = "visible";
+    cardInfo.style.display = "none";
   } else if (
-    !regexLetter.test(inputNameElement.value) &&
-    !inputCardElement.value.match(regex)
+    (!regexLetter.test(inputNameElement.value) &&
+      !inputCardElement.value.match(regex) &&
+      !inputYear.value.match(regexMonth)) ||
+    (!inputMonth.value.match(regexMonth) && !inputCvc.value.match(regexCvc))
   ) {
     finalInfo.style.visibility = "hidden";
+    cardInfo.style.display = "block";
   } else {
-    finalInfo.style.visibility = "visible";
+    finalInfo.style.visibility = "hidden";
+    cardInfo.style.display = "block";
   }
 }
 
