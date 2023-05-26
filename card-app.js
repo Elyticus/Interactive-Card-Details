@@ -205,6 +205,8 @@ const finalButton = () => {
   displayErrorCard.textContent = "";
   displayErrorMonth.textContent = "";
   displayErrorYear.textContent = "";
+
+  cardInfo.style.display = "block";
 };
 
 finalButtonElement.addEventListener("click", finalButton);
