@@ -65,30 +65,64 @@
 
     <div class="card__info">
       <p>Cardholder Name</p>
+
       <input
-        class="input__name"
+        name="fullName"
+        id="input__name"
         type="text"
         placeholder="e.g. Jane Appleseed"
+        aria-label="Full Name"
+        required
       />
+
       <p class="blank__class"></p>
 
       <p>Card Number</p>
+
       <input
-        class="input__card"
-        type="text"
+        name="cardNumber"
+        id="input__card"
+        type="number"
         placeholder="e.g. 1234 5678 9123 0000"
+        aria-label="Card Number"
+        required
       />
+
       <p class="blank__class"></p>
 
       <div class="exp__details">
         <p>Exp. Date (MM/YY)</p>
+
         <p>CVC</p>
       </div>
 
       <div class="exp__date">
-        <input class="input__month" type="text" placeholder="MM" />
-        <input class="input__year" type="text" placeholder="YY" />
-        <input class="input__cvc" type="text" placeholder="e.g. 123" />
+        <input
+          name="monthExpirationDate"
+          id="input__month"
+          type="number"
+          placeholder="MM"
+          aria-label="Month Expiration"
+          required
+        />
+
+        <input
+          name="yearExpirationDate"
+          id="input__year"
+          type="number"
+          placeholder="YY"
+          aria-label="Year Expiration"
+          required
+        />
+
+        <input
+          name="cvcNumber"
+          id="input__cvc"
+          type="number"
+          placeholder="e.g. 123"
+          aria-label="CVC Number"
+          required
+        />
       </div>
 
       <div class="exp__info">
@@ -96,7 +130,7 @@
         <p class="blank__class exp__error"></p>
       </div>
 
-      <button class="confirm__btn">Confirm</button>
+      <button type="submit" id="confirm__btn">Confirm</button>
     </div>
 
     <!-- Completed state start -->
@@ -104,7 +138,7 @@
     <div class="final__section">
       <p class="confirm_thank_you">Thank you!</p>
       <p class="info__details">We've added your card details</p>
-      <button class="final__button">Continue</button>
+      <button type="submit" class="final__button">Continue</button>
     </div>
 
     <script src="card-app.js"></script>

@@ -157,8 +157,8 @@ input {
   outline: none;
 }
 
-.input__name,
-.input__card {
+#input__name,
+#input__card {
   width: 21.25rem;
   height: 2.5rem;
   margin-top: 7px;
@@ -175,8 +175,22 @@ input:focus {
   border-image-slice: 1;
 }
 
-.input__month,
-.input__year {
+/* Firefox */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+
+  appearance: textfield;
+}
+
+/* Google Chrome */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+#input__month,
+#input__year {
   width: 4.375rem;
   height: 2.5rem;
   margin-top: 7px;
@@ -184,7 +198,7 @@ input:focus {
   border-radius: 7px;
 }
 
-.input__cvc {
+#input__cvc {
   width: 10.625rem;
   height: 2.5rem;
   margin-top: 7px;
@@ -192,9 +206,9 @@ input:focus {
   border-radius: 7px;
 }
 
-.redError {
+/* .redError {
   border: 1px solid hsl(0, 100%, 66%);
-}
+} */
 
 .greenValid {
   background-image: linear-gradient(325deg, #0ed8df18, #ffffff);
@@ -205,7 +219,7 @@ input:focus {
   gap: 3.2rem;
 }
 
-.confirm__btn {
+#confirm__btn {
   cursor: pointer;
   margin-top: 2.5rem;
   width: 100%;
@@ -218,7 +232,7 @@ input:focus {
   font-size: 1rem;
 }
 
-.confirm__btn:active {
+#confirm__btn:active {
   background: transparent;
   color: black;
   border: 2px solid hsl(278, 68%, 11%);
